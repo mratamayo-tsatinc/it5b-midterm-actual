@@ -82,7 +82,7 @@ function soBuildFeedback(item){
 function soSyncDrawers(item){
   const consoleAllowed=state.mode!=='exam'||state.examExpired||activeExamPolicy().showNeutralGuidance;
   if(consoleAllowed){
-    if(typeof setConsoleDrawerTitle==='function')setConsoleDrawerTitle('C Program Guide');
+    if(typeof setConsoleDrawerTitle==='function')setConsoleDrawerTitle('Java Program Guide');
     if(typeof setConsoleDrawerContent==='function')setConsoleDrawerContent(soBuildConsoleContent(),{cursor:false});
     if(typeof showConsoleDrawerTab==='function')showConsoleDrawerTab();
   }else{

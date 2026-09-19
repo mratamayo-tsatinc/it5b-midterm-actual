@@ -43,7 +43,7 @@ function soGenerateItem({profile,index,generationContext}){
   if(!exercise)throw new Error(`${profile.id}: no exercise at item ${index+1}`);
   return {
     activityKind:SIMULATE_OUTPUT_MANIFEST.id,profileId:profile.id,itemNumber:index+1,
-    language:'c',exerciseId:exercise.id,filename:exercise.filename,source:exercise.source,
+    language:'java',exerciseId:exercise.id,filename:exercise.filename,source:exercise.source,
     expectedLines:exercise.expectedLines,variables:exercise.variables,
     response:{output:'',variables:exercise.variables.map(variable=>
       Array.isArray(variable.expected)?variable.expected.map(()=>''):'')},

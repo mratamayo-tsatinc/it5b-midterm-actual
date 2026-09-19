@@ -2,7 +2,7 @@ function soValidateProfile(profile){
   const generator=profile.activity&&profile.activity.generator;
   if(!generator||generator.bank!=='it3-midterm-a')
     throw new Error(`${profile.id}: unknown simulate-output exercise bank`);
-  if(profile.activity.language!=='c')throw new Error(`${profile.id}: this exercise bank requires C`);
+  if(profile.activity.language!=='java')throw new Error(`${profile.id}: this exercise bank requires Java`);
   if(!Number.isInteger(profile.itemCount)||profile.itemCount<1||profile.itemCount>soCatalog().length)
     throw new Error(`${profile.id}: itemCount must be between 1 and ${soCatalog().length}`);
   if(!Number.isFinite(profile.pointsPerItem)||profile.pointsPerItem<=0)

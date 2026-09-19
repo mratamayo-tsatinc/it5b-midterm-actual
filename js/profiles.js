@@ -574,12 +574,12 @@ const PROFILES_RAW = [
   },
   {
     enabled:true,
-    meta:{id:'c-simulate-output',name:'C Program Output',
+    meta:{id:'java-simulate-output',name:'Java Program Output',
       description:'Read C programs, predict their printed output, and give final variable values.'},
     scoring:{itemCount:19,pointsPerItem:10},
     activity:{
-      kind:'simulate-output',language:'c',
-      instructions:'Read the C source, then predict its console output and final variable values. Check when ready.',
+      kind:'simulate-output',language:'java',
+      instructions:'Read the Java source, then predict its console output and final variable values. Check when ready.',
       generator:{bank:'it3-midterm-a',shuffle:true}
     }
   },
@@ -607,7 +607,7 @@ const PROFILE_CATEGORIES = [
     'token-identifier-position','token-declaration-complete','token-program-chain',
     'falling-identifier-sort','falling-operator-sort'
   ]},
-  {id:'c-program-output',name:'C Program Output',enabled:false,profileIds:['c-simulate-output']}
+  {id:'java-program-output',name:'Java Program Output',enabled:true,profileIds:['java-simulate-output']}
 ];
 
 const FINALIZED_PROFILES = PROFILES_RAW.map(finalizeProfile);
