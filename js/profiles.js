@@ -575,7 +575,7 @@ const PROFILES_RAW = [
   {
     enabled:true,
     meta:{id:'java-simulate-output',name:'Java Program Output',
-      description:'Read C programs, predict their printed output, and give final variable values.'},
+      description:'Read Java programs, predict their printed output, and give final variable values.'},
     scoring:{itemCount:19,pointsPerItem:10},
     activity:{
       kind:'simulate-output',language:'java',
