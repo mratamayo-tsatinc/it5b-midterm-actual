@@ -607,7 +607,7 @@ const PROFILE_CATEGORIES = [
     'token-identifier-position','token-declaration-complete','token-program-chain',
     'falling-identifier-sort','falling-operator-sort'
   ]},
-  {id:'c-program-output',name:'C Program Output',enabled:true,profileIds:['c-simulate-output']}
+  {id:'c-program-output',name:'C Program Output',enabled:false,profileIds:['c-simulate-output']}
 ];
 
 const FINALIZED_PROFILES = PROFILES_RAW.map(finalizeProfile);

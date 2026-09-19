@@ -6,7 +6,7 @@ function soFeedbackReleased(item){
 
 function soBuildConsoleContent(){
   return h('div',{class:'so-console-guide'},
-    h('h3',{},'Predict a C program'),
+    h('h3',{},'Predict a Java program'),
     h('p',{},'Read the source from top to bottom. Track each variable update and write only the text printed by the program.'),
     h('ul',{},
       h('li',{},'Use one output line for each printed line. Spaces and punctuation matter.'),

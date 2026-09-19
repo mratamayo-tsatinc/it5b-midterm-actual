@@ -3,7 +3,7 @@ const fs=require('fs');
 const path=require('path');
 
 const directory=path.join(__dirname,'exercises');
-const files=fs.readdirSync(directory).filter(name=>/^Task[A-Za-z]+\.c$/.test(name)).sort();
+const files=fs.readdirSync(directory).filter(name=>/^Task[A-Za-z]+\.java$/.test(name)).sort();
 if(!files.length)throw new Error('No C exercises found');
 const exercises=files.map(name=>{
   const raw=fs.readFileSync(path.join(directory,name),'utf8').replace(/^\uFEFF/,'').replace(/\r\n?/g,'\n');
@@ -14,4 +14,4 @@ const exercises=files.map(name=>{
 const output='// Generated from exercises/*.c. Run import-exercises.cjs after editing them.\n'
   +`const SO_EXERCISES=Object.freeze(${JSON.stringify(exercises,null,2)});\n`;
 fs.writeFileSync(path.join(__dirname,'catalog.js'),output);
-console.log(`Imported ${exercises.length} C exercises.`);
+console.log(`Imported ${exercises.length} Java exercises.`);

@@ -57,7 +57,7 @@ const state = {
   screen: 'login', // login | setup | session | done
   userEmail: null,
   userStudentId: null,
-  language: 'c',
+  language: 'java',
   mode: 'exam',
   profileId: PROFILES[0].id,
   itemIndex: 0,
